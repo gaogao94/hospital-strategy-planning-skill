@@ -1,0 +1,731 @@
+{
+  "checker": {
+    "name": "check_transcript.py",
+    "version": "1.0.0"
+  },
+  "meta": {
+    "transcript": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\selftest\\good.json",
+    "matrix": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\trigger-matrix.json",
+    "generated_at": "2026-11-01T16:32:36+08:00",
+    "mode": "coach",
+    "transcript_meta": {
+      "name": "selftest-good",
+      "mode": "coach",
+      "desc": "从零起草：11 步按序触发、每步落盘、输出纪律全过；应 exit 0"
+    },
+    "turn_count": 49,
+    "assistant_turn_count": 24
+  },
+  "summary": {
+    "mode": "coach",
+    "total_steps": 11,
+    "triggered": "11/11",
+    "triggered_count": 11,
+    "missing": [],
+    "out_of_order": [],
+    "critical_count": 0,
+    "warning_count": 0,
+    "passed": true,
+    "exit_code": 0
+  },
+  "coverage": [
+    {
+      "id": "P01",
+      "layer": "想清楚",
+      "title": "先看市场需求和竞争对手，再谈自身特色",
+      "signature": "先做目标市场与竞争对手分析，再逼出「未来五年明确不做什么」，特色才有依据。",
+      "triggered": true,
+      "position": 3,
+      "mode": "marker",
+      "span": [
+        3,
+        6
+      ],
+      "probe_turns": {
+        "对手|竞争": 3,
+        "痛点|外转|可及": 5,
+        "不做什么": 5
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        3,
+        5
+      ],
+      "declared_turn": 3
+    },
+    {
+      "id": "P02",
+      "layer": "想清楚",
+      "title": "直面挑战，别只罗列优势",
+      "signature": "挑战要带数字、点到科室和病种，写到让院长皱眉，否则闭环第一环就是虚的。",
+      "triggered": true,
+      "position": 7,
+      "mode": "marker",
+      "span": [
+        7,
+        10
+      ],
+      "probe_turns": {
+        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 7,
+        "科室|病种": 9,
+        "皱眉|疼": 9
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        7,
+        9
+      ],
+      "declared_turn": 7
+    },
+    {
+      "id": "P03",
+      "layer": "想清楚",
+      "title": "选题不能太大，也不能太小",
+      "signature": "选题要具体到遮住院名就认不出；太大太空，太小小到不配叫机构战略。",
+      "triggered": true,
+      "position": 11,
+      "mode": "marker",
+      "span": [
+        11,
+        14
+      ],
+      "probe_turns": {
+        "遮住|盖住|挡住院名": 13,
+        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 13
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        11,
+        13
+      ],
+      "declared_turn": 11
+    },
+    {
+      "id": "P04",
+      "layer": "想清楚",
+      "title": "把逻辑链做实：指标、举措、结果",
+      "signature": "目标→指标→驱动因素→举措→责任人→基线→目标值→实际值→复盘一条线打通，指标、举措、结果不能三张皮。",
+      "triggered": true,
+      "position": 15,
+      "mode": "marker",
+      "span": [
+        15,
+        18
+      ],
+      "probe_turns": {
+        "目标": 15,
+        "指标": 15,
+        "举措": 17,
+        "结果": 17,
+        "复盘|驱动因素|责任人|基线|目标值|实际值": 15
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        15,
+        17
+      ],
+      "declared_turn": 15
+    },
+    {
+      "id": "P05",
+      "layer": "想清楚",
+      "title": "管理工具服务业务目标，不能反过来",
+      "signature": "先有业务目标再用工具；删掉 BSC/BLM/SWOT 之后还剩什么，剩下的才是战略。",
+      "triggered": true,
+      "position": 19,
+      "mode": "marker",
+      "span": [
+        19,
+        22
+      ],
+      "probe_turns": {
+        "删掉|拿掉": 21,
+        "BSC|BLM|SWOT": 19,
+        "业务目标": 21
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        19,
+        21
+      ],
+      "declared_turn": 19
+    },
+    {
+      "id": "P06",
+      "layer": "做出来",
+      "title": "规划编制是基本功，关键是把资源和绩效「配称」上去",
+      "signature": "把长篇压成战略一张图五层+不做什么，资源预算与绩效考核跟战略咬合，科主任三句话能说清。",
+      "triggered": true,
+      "position": 23,
+      "mode": "marker",
+      "span": [
+        23,
+        28
+      ],
+      "probe_turns": {
+        "战略一张图|五层": 23,
+        "资源|预算": 25,
+        "绩效": 27,
+        "三句话": 27
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        23,
+        25,
+        27
+      ],
+      "declared_turn": 23
+    },
+    {
+      "id": "P07",
+      "layer": "做出来",
+      "title": "治理创新要落到业务结果上",
+      "signature": "治理创新必须挂四维结果对照表：业务增长、财务经营、质量安全、健康结果，每维都有基线与现状。",
+      "triggered": true,
+      "position": 29,
+      "mode": "marker",
+      "span": [
+        29,
+        32
+      ],
+      "probe_turns": {
+        "四维|四个维度": 29,
+        "业务增长": 31,
+        "财务经营": 31,
+        "质量安全": 31,
+        "健康结果": 31,
+        "基线": 31,
+        "现状": 31
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        29,
+        31
+      ],
+      "declared_turn": 29
+    },
+    {
+      "id": "P08",
+      "layer": "讲明白",
+      "title": "用经营汇报替代表决心汇报",
+      "signature": "汇报按问题、取舍、结果、没做到四段讲，第三加第四段至少占一半篇幅。",
+      "triggered": true,
+      "position": 33,
+      "mode": "marker",
+      "span": [
+        33,
+        36
+      ],
+      "probe_turns": {
+        "四段": 33,
+        "问题": 33,
+        "取舍": 33,
+        "结果": 33,
+        "没做到|学到什么": 33,
+        "一半": 35
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        33,
+        35
+      ],
+      "declared_turn": 33
+    },
+    {
+      "id": "P09",
+      "layer": "讲明白",
+      "title": "让深度思考过、作出艰难决策的人来讲",
+      "signature": "让书记/院长/分管领导本人讲 20 分钟、答辩 10 到 15 分钟，答得出「放弃了什么、为什么」。",
+      "triggered": true,
+      "position": 37,
+      "mode": "marker",
+      "span": [
+        37,
+        40
+      ],
+      "probe_turns": {
+        "书记|院长|分管领导": 37,
+        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15": 39,
+        "放弃(?:了)?什么": 39
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        37,
+        39
+      ],
+      "declared_turn": 37
+    },
+    {
+      "id": "P10",
+      "layer": "讲明白",
+      "title": "AI 时代，少写一点",
+      "signature": "AI 时代少写：整个战略一页纸讲完，标题写结论句，一页只讲一个观点。",
+      "triggered": true,
+      "position": 41,
+      "mode": "marker",
+      "span": [
+        41,
+        44
+      ],
+      "probe_turns": {
+        "一页纸": 41,
+        "结论句": 43,
+        "一个观点": 43
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        41,
+        43
+      ],
+      "declared_turn": 41
+    },
+    {
+      "id": "P11",
+      "layer": "讲明白",
+      "title": "用通用叙事方法讲中国特色",
+      "signature": "用 DRG/DIP↔价值医疗、紧密型医联体↔IDS、分级诊疗↔人群健康这套通用语法讲中国特色，指标选国际上可比的。",
+      "triggered": true,
+      "position": 45,
+      "mode": "marker",
+      "span": [
+        45,
+        48
+      ],
+      "probe_turns": {
+        "DRG|DIP": 45,
+        "价值医疗|VBHC": 45,
+        "医联体|医疗联合体": 45,
+        "IDS|整合型": 45,
+        "分级诊疗": 45,
+        "人群健康|Population Health": 45,
+        "国际可比": 47
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        45,
+        47
+      ],
+      "declared_turn": 45
+    }
+  ],
+  "order": {
+    "out_of_order": [],
+    "missing": []
+  },
+  "discipline": {
+    "limits": {
+      "opening_char_limit": 80,
+      "body_char_limit": 120,
+      "max_questions_per_turn": 2,
+      "max_explain_sentences_per_turn": 1,
+      "max_bullets_per_turn": 3
+    },
+    "opening": {
+      "turn": 1,
+      "chars": 57,
+      "questions": 1,
+      "ok": true,
+      "has_question": true
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "role": "opening",
+        "body_chars": 57,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 3,
+        "role": "assistant",
+        "body_chars": 33,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 5,
+        "role": "assistant",
+        "body_chars": 32,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 7,
+        "role": "assistant",
+        "body_chars": 35,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 9,
+        "role": "assistant",
+        "body_chars": 30,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 11,
+        "role": "assistant",
+        "body_chars": 26,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 13,
+        "role": "assistant",
+        "body_chars": 34,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 15,
+        "role": "assistant",
+        "body_chars": 32,
+        "questions": 2,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 17,
+        "role": "assistant",
+        "body_chars": 30,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 19,
+        "role": "assistant",
+        "body_chars": 17,
+        "questions": 2,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 21,
+        "role": "assistant",
+        "body_chars": 24,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 23,
+        "role": "assistant",
+        "body_chars": 22,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 25,
+        "role": "assistant",
+        "body_chars": 27,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 27,
+        "role": "assistant",
+        "body_chars": 38,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 29,
+        "role": "assistant",
+        "body_chars": 31,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 31,
+        "role": "assistant",
+        "body_chars": 24,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 33,
+        "role": "assistant",
+        "body_chars": 48,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 35,
+        "role": "assistant",
+        "body_chars": 30,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 37,
+        "role": "assistant",
+        "body_chars": 19,
+        "questions": 2,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 39,
+        "role": "assistant",
+        "body_chars": 34,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 41,
+        "role": "assistant",
+        "body_chars": 20,
+        "questions": 2,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 43,
+        "role": "assistant",
+        "body_chars": 26,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 45,
+        "role": "assistant",
+        "body_chars": 41,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 47,
+        "role": "assistant",
+        "body_chars": 30,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      }
+    ]
+  },
+  "guards": {
+    "banned_and_anti": [],
+    "invented_numbers": [],
+    "gate": [
+      {
+        "id": "P01",
+        "gate": "目标市场人群痛点|竞争格局|两张图",
+        "position": 3,
+        "window": [
+          3,
+          8
+        ],
+        "landed": true,
+        "hit_turn": 5,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第1步/11·市场与竞争】两张图落盘。再答一句：未来五年，你"
+      },
+      {
+        "id": "P02",
+        "gate": "挑战清单|挑战表|挑战[:：]|§\\s*2",
+        "position": 7,
+        "window": [
+          7,
+          12
+        ],
+        "landed": true,
+        "hit_turn": 9,
+        "in_artifact": true,
+        "skipped": false,
+        "hit_snippet": "` 【落盘】规划底稿.md §2 挑战 | 挑战 | 现象"
+      },
+      {
+        "id": "P03",
+        "gate": "选题[:：]|§\\s*3|遮住院名",
+        "position": 11,
+        "window": [
+          11,
+          16
+        ],
+        "landed": true,
+        "hit_turn": 13,
+        "in_artifact": true,
+        "skipped": false,
+        "hit_snippet": "` 【落盘】规划底稿.md §3 选题 > 一句话选题：在"
+      },
+      {
+        "id": "P04",
+        "gate": "逻辑链|九栏|§\\s*4",
+        "position": 15,
+        "window": [
+          15,
+          20
+        ],
+        "landed": true,
+        "hit_turn": 15,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第4步/11·逻辑链】最重要的一个目标是什么？用"
+      },
+      {
+        "id": "P05",
+        "gate": "业务目标|工具与业务目标|§\\s*5",
+        "position": 19,
+        "window": [
+          19,
+          24
+        ],
+        "landed": true,
+        "hit_turn": 21,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "现在把工具名全删掉：还剩哪个业务目标？一句话。 ``` 【落盘】"
+      },
+      {
+        "id": "P06",
+        "gate": "战略一张图|五层",
+        "position": 23,
+        "window": [
+          23,
+          30
+        ],
+        "landed": true,
+        "hit_turn": 23,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第6步/11·配称】先摆战略一张图的五层。第一层，愿景是什么？"
+      },
+      {
+        "id": "P07",
+        "gate": "四维|结果对照表|§\\s*7",
+        "position": 29,
+        "window": [
+          29,
+          34
+        ],
+        "landed": true,
+        "hit_turn": 29,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第7步/11·结果对照表】这套治理，用四个维度的数字"
+      },
+      {
+        "id": "P08",
+        "gate": "四段|§\\s*8|汇报稿",
+        "position": 33,
+        "window": [
+          33,
+          38
+        ],
+        "landed": true,
+        "hit_turn": 33,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第8步/11·四段汇报】汇报只讲四段：我们面对"
+      },
+      {
+        "id": "P09",
+        "gate": "答辩|汇报人|§\\s*9",
+        "position": 37,
+        "window": [
+          37,
+          42
+        ],
+        "landed": true,
+        "hit_turn": 39,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "钟讲述，10 到 15 分钟答辩；答辩第一问就是你们放弃了什"
+      },
+      {
+        "id": "P10",
+        "gate": "一页纸|§\\s*10",
+        "position": 41,
+        "window": [
+          41,
+          46
+        ],
+        "landed": true,
+        "hit_turn": 41,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第10步/11·一页纸】整份战略，一页纸讲得完吗？"
+      },
+      {
+        "id": "P11",
+        "gate": "通用叙事|价值医疗|§\\s*11",
+        "position": 45,
+        "window": [
+          45,
+          48
+        ],
+        "landed": true,
+        "hit_turn": 45,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第11步/11·通用叙事】要不要用国际通用说法再讲一"
+      }
+    ]
+  },
+  "numbers": {
+    "user_number_tokens": [
+      "0.92",
+      "1.15",
+      "1200",
+      "15",
+      "18",
+      "180",
+      "20",
+      "3",
+      "38",
+      "5",
+      "50",
+      "6.2",
+      "68"
+    ],
+    "unprovided": []
+  },
+  "violations": {
+    "critical": [],
+    "warning": []
+  }
+}

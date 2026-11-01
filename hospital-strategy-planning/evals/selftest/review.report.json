@@ -1,0 +1,451 @@
+{
+  "checker": {
+    "name": "check_transcript.py",
+    "version": "1.0.0"
+  },
+  "meta": {
+    "transcript": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\selftest\\review.json",
+    "matrix": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\trigger-matrix.json",
+    "generated_at": "2026-11-01T16:27:15+08:00",
+    "mode": "review",
+    "transcript_meta": {
+      "name": "selftest-review",
+      "mode": "review",
+      "desc": "体检模式：11 行体检表同一轮命中 P01-P11，豁免 gate；应 exit 0"
+    },
+    "turn_count": 6,
+    "assistant_turn_count": 3
+  },
+  "summary": {
+    "mode": "review",
+    "total_steps": 11,
+    "triggered": "11/11",
+    "triggered_count": 11,
+    "missing": [],
+    "out_of_order": [],
+    "critical_count": 0,
+    "warning_count": 0,
+    "passed": true,
+    "exit_code": 0
+  },
+  "coverage": [
+    {
+      "id": "P01",
+      "layer": "想清楚",
+      "title": "先看市场需求和竞争对手，再谈自身特色",
+      "signature": "先做目标市场与竞争对手分析，再逼出「未来五年明确不做什么」，特色才有依据。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "对手|竞争": 3,
+        "痛点|外转|可及": 3,
+        "不做什么": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P02",
+      "layer": "想清楚",
+      "title": "直面挑战，别只罗列优势",
+      "signature": "挑战要带数字、点到科室和病种，写到让院长皱眉，否则闭环第一环就是虚的。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 3,
+        "科室|病种": 3,
+        "皱眉|疼": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P03",
+      "layer": "想清楚",
+      "title": "选题不能太大，也不能太小",
+      "signature": "选题要具体到遮住院名就认不出；太大太空，太小小到不配叫机构战略。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "遮住|盖住|挡住院名": 3,
+        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P04",
+      "layer": "想清楚",
+      "title": "把逻辑链做实：指标、举措、结果",
+      "signature": "目标→指标→驱动因素→举措→责任人→基线→目标值→实际值→复盘一条线打通，指标、举措、结果不能三张皮。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "目标": 3,
+        "指标": 3,
+        "举措": 3,
+        "结果": 3,
+        "复盘|驱动因素|责任人|基线|目标值|实际值": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P05",
+      "layer": "想清楚",
+      "title": "管理工具服务业务目标，不能反过来",
+      "signature": "先有业务目标再用工具；删掉 BSC/BLM/SWOT 之后还剩什么，剩下的才是战略。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "删掉|拿掉": 3,
+        "BSC|BLM|SWOT": 3,
+        "业务目标": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P06",
+      "layer": "做出来",
+      "title": "规划编制是基本功，关键是把资源和绩效「配称」上去",
+      "signature": "把长篇压成战略一张图五层+不做什么，资源预算与绩效考核跟战略咬合，科主任三句话能说清。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "战略一张图|五层": 3,
+        "资源|预算": 3,
+        "绩效": 3,
+        "三句话": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P07",
+      "layer": "做出来",
+      "title": "治理创新要落到业务结果上",
+      "signature": "治理创新必须挂四维结果对照表：业务增长、财务经营、质量安全、健康结果，每维都有基线与现状。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "四维|四个维度": 3,
+        "业务增长": 3,
+        "财务经营": 3,
+        "质量安全": 3,
+        "健康结果": 3,
+        "基线": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P08",
+      "layer": "讲明白",
+      "title": "用经营汇报替代表决心汇报",
+      "signature": "汇报按问题、取舍、结果、没做到四段讲，第三加第四段至少占一半篇幅。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "四段": 3,
+        "问题": 3,
+        "取舍": 3,
+        "结果": 3,
+        "没做到|学到什么": 3,
+        "一半": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P09",
+      "layer": "讲明白",
+      "title": "让深度思考过、作出艰难决策的人来讲",
+      "signature": "让书记/院长/分管领导本人讲 20 分钟、答辩 10 到 15 分钟，答得出「放弃了什么、为什么」。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "书记|院长|分管领导": 3,
+        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15": 3,
+        "放弃(?:了)?什么": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P10",
+      "layer": "讲明白",
+      "title": "AI 时代，少写一点",
+      "signature": "AI 时代少写：整个战略一页纸讲完，标题写结论句，一页只讲一个观点。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "一页纸": 3,
+        "结论句": 3,
+        "一个观点": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    },
+    {
+      "id": "P11",
+      "layer": "讲明白",
+      "title": "用通用叙事方法讲中国特色",
+      "signature": "用 DRG/DIP↔价值医疗、紧密型医联体↔IDS、分级诊疗↔人群健康这套通用语法讲中国特色，指标选国际上可比的。",
+      "triggered": true,
+      "position": 3,
+      "mode": "review",
+      "span": [
+        3,
+        3
+      ],
+      "probe_turns": {
+        "DRG|DIP": 3,
+        "价值医疗|VBHC": 3,
+        "医联体|医疗联合体": 3,
+        "IDS|整合型": 3,
+        "分级诊疗": 3,
+        "人群健康|Population Health": 3,
+        "国际可比": 3
+      },
+      "missing_probes": [],
+      "declared_turns": []
+    }
+  ],
+  "order": {
+    "out_of_order": [],
+    "missing": []
+  },
+  "discipline": {
+    "limits": {
+      "opening_char_limit": 80,
+      "body_char_limit": 120,
+      "max_questions_per_turn": 2,
+      "max_explain_sentences_per_turn": 1,
+      "max_bullets_per_turn": 3
+    },
+    "opening": {
+      "turn": 1,
+      "chars": 23,
+      "questions": 1,
+      "ok": true,
+      "has_question": true
+    },
+    "turns": [
+      {
+        "turn": 1,
+        "role": "opening",
+        "body_chars": 23,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 3,
+        "role": "assistant",
+        "body_chars": 18,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 5,
+        "role": "assistant",
+        "body_chars": 22,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      }
+    ]
+  },
+  "guards": {
+    "banned_and_anti": [],
+    "invented_numbers": [],
+    "gate": [
+      {
+        "id": "P01",
+        "gate": "目标市场人群痛点|竞争格局|两张图",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P02",
+        "gate": "挑战清单|挑战表|挑战[:：]|§\\s*2",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P03",
+        "gate": "选题[:：]|§\\s*3|遮住院名",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P04",
+        "gate": "逻辑链|九栏|§\\s*4",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P05",
+        "gate": "业务目标|工具与业务目标|§\\s*5",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P06",
+        "gate": "战略一张图|五层",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P07",
+        "gate": "四维|结果对照表|§\\s*7",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P08",
+        "gate": "四段|§\\s*8|汇报稿",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P09",
+        "gate": "答辩|汇报人|§\\s*9",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P10",
+        "gate": "一页纸|§\\s*10",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      },
+      {
+        "id": "P11",
+        "gate": "通用叙事|价值医疗|§\\s*11",
+        "position": 3,
+        "window": null,
+        "landed": false,
+        "hit_turn": null,
+        "in_artifact": false,
+        "skipped": true,
+        "skip_reason": "review 模式（体检/审稿）：体检表本身即落盘物，豁免 gate 检查"
+      }
+    ]
+  },
+  "numbers": {
+    "user_number_tokens": [
+      "1"
+    ],
+    "unprovided": []
+  },
+  "violations": {
+    "critical": [],
+    "warning": []
+  }
+}
