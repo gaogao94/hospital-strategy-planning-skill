@@ -1,6 +1,11 @@
 ---
 name: hospital-strategy-planning
+version: 3.3.0
+display_name: 医院战略规划教练
+display_name_en: Hospital Strategy Planning Coach
 description: 引导医院（尤其公立医院）一步步完成战略规划，或体检/评审已有规划稿：按「定位—取舍—配称」和十一条建议，分「想清楚—做出来—讲明白」三层推进，一次只问一个小问题、每步落盘一段底稿、关键步骤出成图、严格控字数。用于医院战略规划、发展规划、五年规划、十五五规划、公立医院战略管理、医院集团/医联体战略、战略地图与战略解码、一页纸战略、战略规划报告/编制/修改/评审/审稿、战略汇报与答辩打磨、学科/病种/资源投入取舍、国考与等级评审背景下的战略调整等场景。
+description_zh: 引导医院（尤其公立医院）一步步完成战略规划，或体检/评审已有规划稿。按张琨「定位—取舍—配称」与十一条建议，分想清楚、做出来、讲明白三层推进：一次只问一个小问题、每步落盘一段底稿、用原文自带的测试当闸门，并严格控字数。适用于医院战略规划、发展/五年/十五五规划、规划报告编制与评审、战略汇报与答辩打磨、学科与资源投入取舍、国考与等级评审背景下的战略调整等场景。
+description_en: Guides hospitals (especially public hospitals) step by step through strategic planning, or reviews an existing plan draft. Follows the "positioning, trade-offs, fit" framework and eleven recommendations in three layers (think clearly, make it happen, tell it clearly) - one short question at a time, artifacts written to disk, the article's own self-tests as gates, and strict output-length limits. Use for hospital strategic planning, five-year / 15th Five-Year plans, plan drafting and review, strategy presentation and defense coaching, discipline and resource trade-offs, and DRG/DIP repositioning.
 argument-hint: "[从零起草 | 改已有稿 | 评审/听汇报 | 汇报答辩打磨 | 单点取舍]"
 license: MIT
 metadata:
