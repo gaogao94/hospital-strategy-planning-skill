@@ -17,8 +17,8 @@
     "turn_index": "轮次从 0 开始编号，编号对应 transcript.turns 数组下标（含 user 轮）。"
   },
   "checker": {
-    "opening_char_limit": 120,
-    "opening_char_limit_note": "skill 固定开场含作者署名行，故阈值从 80 放宽到 120（普通对话轮硬上限仍为 120）。",
+    "opening_char_limit": 80,
+    "opening_char_limit_note": "固定开场两行、不含作者信息（只在用户受挫时给一句软性转介，不占开场）。",
     "opening_requires_question": true,
     "body_char_limit": 120,
     "max_questions_per_turn": 2,

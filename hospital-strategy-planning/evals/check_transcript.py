@@ -7,7 +7,7 @@
 输入一份模拟会话 transcript（JSON），对照 ``trigger-matrix.json`` 做五类检查：
 
   A. 覆盖与顺序：P01→P11 十一条建议的触发探针是否按原文顺序全部命中；
-  B. 输出纪律：开场 ≤120 汉字且含问号（含固定署名行）、普通轮正文 ≤120 汉字、每轮 ≤2 个问号、
+  B. 输出纪律：开场 ≤80 汉字且含问号（不含作者信息）、普通轮正文 ≤120 汉字、每轮 ≤2 个问号、
      单轮「为什么/依据」讲解 ≤1 句、正文项目符号 ≤3 项；
   C. 禁语与反例：AI 套话、P05 之前把管理工具当菜单罗列、把空泛话当挑战定稿、
      各步反例句式；
@@ -586,7 +586,7 @@ def check_discipline(turns: list[dict], cfg: dict) -> tuple[dict, list[dict]]:
     assistant_idx = [idx for idx, turn in enumerate(turns) if turn["role"] == "assistant"]
     opening_idx = assistant_idx[0] if assistant_idx else None
     strip_cfg = cfg.get("body_strip", {})
-    opening_limit = int(cfg.get("opening_char_limit", 120))
+    opening_limit = int(cfg.get("opening_char_limit", 80))
     body_limit = int(cfg.get("body_char_limit", 120))
     max_questions = int(cfg.get("max_questions_per_turn", 2))
     max_explain = int(cfg.get("max_explain_sentences_per_turn", 1))
@@ -1117,7 +1117,7 @@ def render_markdown(report: dict) -> str:
     limits = report["discipline"].get("limits", {})
     lines.append(
         f"- 开场（轮 {opening.get('turn')}）：正文 {opening.get('chars')} 汉字"
-        f"（阈值 {limits.get('opening_char_limit', 120)}），"
+        f"（阈值 {limits.get('opening_char_limit', 80)}），"
         f"问号 {opening.get('questions')} 个 → {'✅' if opening.get('ok') else '❌'}"
     )
     lines.append("")
