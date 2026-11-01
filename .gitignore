@@ -5,3 +5,5 @@ Thumbs.db
 
 hospital-strategy-planning/evals/selftest/*.report.json
 hospital-strategy-planning/evals/selftest/*.report.md
+hospital-strategy-planning/evals/selftest/report.json
+hospital-strategy-planning/evals/selftest/report.md
