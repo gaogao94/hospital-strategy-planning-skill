@@ -15,10 +15,10 @@
 ## 快速开始
 
 ```powershell
-cd "D:\阅读\医院战略规划skill\hospital-strategy-planning\evals"
+cd hospital-strategy-planning/evals
 
-# 本机 Python（标准库即可；Python ≥ 3.10，本机 3.12 已验证）
-$PY = "C:\Users\admin\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe"
+# Python ≥ 3.10 即可（只用标准库；3.12 已验证）
+$PY = "python"
 
 # 1) 自测：good 应通过（exit 0）
 & $PY check_transcript.py selftest/good.json --json selftest/good.report.json
@@ -32,8 +32,8 @@ $PY = "C:\Users\admin\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\
 # 4) 体检模式自测：11 行体检表同一轮命中，gate 豁免（exit 0）
 & $PY check_transcript.py selftest/review.json --json selftest/review.report.json
 
-# 5) 校验真实模拟会话
-& $PY check_transcript.py ..\..\sim\transcripts\s1.json --json ..\..\sim\reports\s1.check.json
+# 5) 校验模拟会话（仓库里 docs/sim/transcripts 有 4 份对练记录）
+& $PY check_transcript.py ..\..\docs\sim\transcripts\s1.json --json ..\..\docs\sim\reports\s1.check.json
 ```
 
 `--json` 省略时，报告默认写到 transcript 同目录的 `report.json` / `report.md`。建议每次都显式给 `--json`，避免多次运行互相覆盖。
@@ -74,7 +74,7 @@ $PY = "C:\Users\admin\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\
 |---|---|---|---|
 | `STEP_MISSING` | 缺某一步 | 该步 `required_probes` 未全部命中 | critical |
 | `STEP_OUT_OF_ORDER` | 乱序 | 后一步的命中轮早于前一步（原文顺序不可换） | critical |
-| `OPENING_TOO_LONG` | 开场超长 | 第一条 assistant 轮正文 > 80 汉字 | critical |
+| `OPENING_TOO_LONG` | 开场超长 | 第一条 assistant 轮正文 > 120 汉字（含固定署名行） | critical |
 | `OPENING_NO_QUESTION` | 开场无问号 | 开场没有问句（应一次一问收尾） | critical |
 | `TURN_TOO_LONG` | 单轮正文超 120 字 | 普通轮剔除产物块后 > 120 汉字 | critical |
 | `TOO_MANY_QUESTIONS` | 每轮问号 > 2 | 全轮文本（含产物块）问号数 > 2 | critical |
@@ -87,7 +87,7 @@ $PY = "C:\Users\admin\.dsh\dsh-runtimes\dsh-primary-runtime\dependencies\python\
 | `INVENTED_NUMBER` | 编数字 | assistant 出现带单位（%/万/亿/元/人/例/张/床…）的数字，用户从未提供 | warning |
 | `GATE_NOT_LANDED` | gate 未落盘 | 该步触发后，产物关键词没在该步区间或其后 2 轮内出现 | warning |
 
-**字数阈值与 skill 铁律对齐**：skill 里写的是「默认 ≤2 句 / ≤60 字，硬上限 120 字（不含产物块）」，所以检查器按**硬上限 120 汉字**判 critical，60 字只作软目标、不判违规；开场额外要求 **≤80 汉字且含问号**。阈值集中在 `trigger-matrix.json` 的 `checker` 段，可改。
+**字数阈值与 skill 铁律对齐**：skill 里写的是「默认 ≤2 句 / ≤60 字，硬上限 120 字（不含产物块）」，所以检查器按**硬上限 120 汉字**判 critical，60 字只作软目标、不判违规；开场要求 **≤120 汉字且含问号**（开场固定含作者署名行，故从 80 放宽到 120）。阈值集中在 `trigger-matrix.json` 的 `checker` 段，可改。
 
 **critical / warning 的区别**：critical 影响退出码（不通过），warning 只提示质量瑕疵、不阻断；加 `--strict` 后 warning 也阻断。报告里两类分别列出。
 

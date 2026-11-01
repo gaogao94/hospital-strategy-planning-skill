@@ -4,17 +4,17 @@
     "version": "1.0.0"
   },
   "meta": {
-    "transcript": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\selftest\\review.json",
-    "matrix": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\trigger-matrix.json",
-    "generated_at": "2026-11-01T16:27:15+08:00",
+    "transcript": "sim\\transcripts\\s2.json",
+    "matrix": "hospital-strategy-planning/evals/trigger-matrix.json",
+    "generated_at": "2026-11-01T16:37:52+08:00",
     "mode": "review",
     "transcript_meta": {
-      "name": "selftest-review",
+      "scenario": "S2",
       "mode": "review",
-      "desc": "体检模式：11 行体检表同一轮命中 P01-P11，豁免 gate；应 exit 0"
+      "description": "县级市医院院长，改已有稿（体检模式）；贴一版模板化规划稿（PEST/SWOT/BSC 菜单、医疗教学科研人才数智化章节、「人才梯队有待加强」式挑战、「高质量发展」选题、无预算绩效配称）。检验 11 行体检表＋最疼 3 条＋一问「先改哪条」。"
     },
-    "turn_count": 6,
-    "assistant_turn_count": 3
+    "turn_count": 19,
+    "assistant_turn_count": 10
   },
   "summary": {
     "mode": "review",
@@ -35,16 +35,16 @@
       "title": "先看市场需求和竞争对手，再谈自身特色",
       "signature": "先做目标市场与竞争对手分析，再逼出「未来五年明确不做什么」，特色才有依据。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "对手|竞争": 3,
-        "痛点|外转|可及": 3,
-        "不做什么": 3
+        "对手|竞争": 2,
+        "痛点|外转|可及": 2,
+        "不做什么": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -55,16 +55,16 @@
       "title": "直面挑战，别只罗列优势",
       "signature": "挑战要带数字、点到科室和病种，写到让院长皱眉，否则闭环第一环就是虚的。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        0,
+        2
       ],
       "probe_turns": {
-        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 3,
-        "科室|病种": 3,
-        "皱眉|疼": 3
+        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 0,
+        "科室|病种": 2,
+        "皱眉|疼": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -75,15 +75,15 @@
       "title": "选题不能太大，也不能太小",
       "signature": "选题要具体到遮住院名就认不出；太大太空，太小小到不配叫机构战略。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "遮住|盖住|挡住院名": 3,
-        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 3
+        "遮住|盖住|挡住院名": 2,
+        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -94,18 +94,18 @@
       "title": "把逻辑链做实：指标、举措、结果",
       "signature": "目标→指标→驱动因素→举措→责任人→基线→目标值→实际值→复盘一条线打通，指标、举措、结果不能三张皮。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "目标": 3,
-        "指标": 3,
-        "举措": 3,
-        "结果": 3,
-        "复盘|驱动因素|责任人|基线|目标值|实际值": 3
+        "目标": 2,
+        "指标": 2,
+        "举措": 2,
+        "结果": 2,
+        "复盘|驱动因素|责任人|基线|目标值|实际值": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -116,16 +116,16 @@
       "title": "管理工具服务业务目标，不能反过来",
       "signature": "先有业务目标再用工具；删掉 BSC/BLM/SWOT 之后还剩什么，剩下的才是战略。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "删掉|拿掉": 3,
-        "BSC|BLM|SWOT": 3,
-        "业务目标": 3
+        "删掉|拿掉": 2,
+        "BSC|BLM|SWOT": 2,
+        "业务目标": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -136,17 +136,17 @@
       "title": "规划编制是基本功，关键是把资源和绩效「配称」上去",
       "signature": "把长篇压成战略一张图五层+不做什么，资源预算与绩效考核跟战略咬合，科主任三句话能说清。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "战略一张图|五层": 3,
-        "资源|预算": 3,
-        "绩效": 3,
-        "三句话": 3
+        "战略一张图|五层": 2,
+        "资源|预算": 2,
+        "绩效": 2,
+        "三句话": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -157,19 +157,20 @@
       "title": "治理创新要落到业务结果上",
       "signature": "治理创新必须挂四维结果对照表：业务增长、财务经营、质量安全、健康结果，每维都有基线与现状。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "四维|四个维度": 3,
-        "业务增长": 3,
-        "财务经营": 3,
-        "质量安全": 3,
-        "健康结果": 3,
-        "基线": 3
+        "四维|四个维度": 2,
+        "业务增长": 2,
+        "财务经营": 2,
+        "质量安全": 2,
+        "健康结果": 2,
+        "基线": 2,
+        "现状": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -180,19 +181,19 @@
       "title": "用经营汇报替代表决心汇报",
       "signature": "汇报按问题、取舍、结果、没做到四段讲，第三加第四段至少占一半篇幅。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        0,
+        2
       ],
       "probe_turns": {
-        "四段": 3,
-        "问题": 3,
-        "取舍": 3,
-        "结果": 3,
-        "没做到|学到什么": 3,
-        "一半": 3
+        "四段": 2,
+        "问题": 2,
+        "取舍": 0,
+        "结果": 2,
+        "没做到|学到什么": 2,
+        "一半": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -203,16 +204,16 @@
       "title": "让深度思考过、作出艰难决策的人来讲",
       "signature": "让书记/院长/分管领导本人讲 20 分钟、答辩 10 到 15 分钟，答得出「放弃了什么、为什么」。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "书记|院长|分管领导": 3,
-        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15": 3,
-        "放弃(?:了)?什么": 3
+        "书记|院长|分管领导": 2,
+        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15": 2,
+        "放弃(?:了)?什么": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -223,16 +224,16 @@
       "title": "AI 时代，少写一点",
       "signature": "AI 时代少写：整个战略一页纸讲完，标题写结论句，一页只讲一个观点。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "一页纸": 3,
-        "结论句": 3,
-        "一个观点": 3
+        "一页纸": 2,
+        "结论句": 2,
+        "一个观点": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -243,20 +244,20 @@
       "title": "用通用叙事方法讲中国特色",
       "signature": "用 DRG/DIP↔价值医疗、紧密型医联体↔IDS、分级诊疗↔人群健康这套通用语法讲中国特色，指标选国际上可比的。",
       "triggered": true,
-      "position": 3,
+      "position": 2,
       "mode": "review",
       "span": [
-        3,
-        3
+        2,
+        2
       ],
       "probe_turns": {
-        "DRG|DIP": 3,
-        "价值医疗|VBHC": 3,
-        "医联体|医疗联合体": 3,
-        "IDS|整合型": 3,
-        "分级诊疗": 3,
-        "人群健康|Population Health": 3,
-        "国际可比": 3
+        "DRG|DIP": 2,
+        "价值医疗|VBHC": 2,
+        "医联体|医疗联合体": 2,
+        "IDS|整合型": 2,
+        "分级诊疗": 2,
+        "人群健康|Population Health": 2,
+        "国际可比": 2
       },
       "missing_probes": [],
       "declared_turns": []
@@ -275,24 +276,51 @@
       "max_bullets_per_turn": 3
     },
     "opening": {
-      "turn": 1,
-      "chars": 23,
+      "turn": 0,
+      "chars": 61,
       "questions": 1,
       "ok": true,
       "has_question": true
     },
     "turns": [
       {
-        "turn": 1,
+        "turn": 0,
         "role": "opening",
-        "body_chars": 23,
+        "body_chars": 61,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
       },
       {
-        "turn": 3,
+        "turn": 2,
+        "role": "assistant",
+        "body_chars": 8,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 4,
+        "role": "assistant",
+        "body_chars": 70,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 3,
+        "violations": []
+      },
+      {
+        "turn": 6,
+        "role": "assistant",
+        "body_chars": 12,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 8,
         "role": "assistant",
         "body_chars": 18,
         "questions": 1,
@@ -301,9 +329,45 @@
         "violations": []
       },
       {
-        "turn": 5,
+        "turn": 10,
         "role": "assistant",
-        "body_chars": 22,
+        "body_chars": 18,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 12,
+        "role": "assistant",
+        "body_chars": 19,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 14,
+        "role": "assistant",
+        "body_chars": 18,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 16,
+        "role": "assistant",
+        "body_chars": 19,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 18,
+        "role": "assistant",
+        "body_chars": 14,
         "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
@@ -318,7 +382,7 @@
       {
         "id": "P01",
         "gate": "目标市场人群痛点|竞争格局|两张图",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -329,7 +393,7 @@
       {
         "id": "P02",
         "gate": "挑战清单|挑战表|挑战[:：]|§\\s*2",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -340,7 +404,7 @@
       {
         "id": "P03",
         "gate": "选题[:：]|§\\s*3|遮住院名",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -351,7 +415,7 @@
       {
         "id": "P04",
         "gate": "逻辑链|九栏|§\\s*4",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -362,7 +426,7 @@
       {
         "id": "P05",
         "gate": "业务目标|工具与业务目标|§\\s*5",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -373,7 +437,7 @@
       {
         "id": "P06",
         "gate": "战略一张图|五层",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -384,7 +448,7 @@
       {
         "id": "P07",
         "gate": "四维|结果对照表|§\\s*7",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -395,7 +459,7 @@
       {
         "id": "P08",
         "gate": "四段|§\\s*8|汇报稿",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -406,7 +470,7 @@
       {
         "id": "P09",
         "gate": "答辩|汇报人|§\\s*9",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -417,7 +481,7 @@
       {
         "id": "P10",
         "gate": "一页纸|§\\s*10",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -428,7 +492,7 @@
       {
         "id": "P11",
         "gate": "通用叙事|价值医疗|§\\s*11",
-        "position": 3,
+        "position": 2,
         "window": null,
         "landed": false,
         "hit_turn": null,
@@ -440,7 +504,10 @@
   },
   "numbers": {
     "user_number_tokens": [
-      "1"
+      "10",
+      "20",
+      "2030",
+      "3"
     ],
     "unprovided": []
   },

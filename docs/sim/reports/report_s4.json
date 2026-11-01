@@ -4,33 +4,29 @@
     "version": "1.0.0"
   },
   "meta": {
-    "transcript": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\selftest\\bad.json",
-    "matrix": "D:\\阅读\\医院战略规划skill\\hospital-strategy-planning\\evals\\trigger-matrix.json",
-    "generated_at": "2026-11-01T16:32:36+08:00",
+    "transcript": "sim\\transcripts\\s4.json",
+    "matrix": "hospital-strategy-planning/evals/trigger-matrix.json",
+    "generated_at": "2026-11-01T16:37:52+08:00",
     "mode": "coach",
     "transcript_meta": {
-      "name": "selftest-bad",
+      "scenario": "S4",
       "mode": "coach",
-      "desc": "应 exit 1，并点名缺 P05 / 开场超长 / 乱序"
+      "description": "续跑：工作目录已有规划底稿.md 的 §1–§3 与 STATE.md（当前第 4 步），用户只说「继续」；按「抽查关键内容即视为已过」不重问，从第 4 步接上。"
     },
-    "turn_count": 45,
-    "assistant_turn_count": 22
+    "turn_count": 76,
+    "assistant_turn_count": 38
   },
   "summary": {
     "mode": "coach",
     "total_steps": 11,
-    "triggered": "10/11",
-    "triggered_count": 10,
-    "missing": [
-      "P05"
-    ],
-    "out_of_order": [
-      "P09"
-    ],
-    "critical_count": 3,
+    "triggered": "11/11",
+    "triggered_count": 11,
+    "missing": [],
+    "out_of_order": [],
+    "critical_count": 0,
     "warning_count": 0,
-    "passed": false,
-    "exit_code": 1
+    "passed": true,
+    "exit_code": 0
   },
   "coverage": [
     {
@@ -43,17 +39,16 @@
       "mode": "marker",
       "span": [
         3,
-        6
+        4
       ],
       "probe_turns": {
         "对手|竞争": 3,
-        "痛点|外转|可及": 5,
-        "不做什么": 5
+        "痛点|外转|可及": 3,
+        "不做什么": 3
       },
       "missing_probes": [],
       "declared_turns": [
-        3,
-        5
+        3
       ],
       "declared_turn": 3
     },
@@ -63,23 +58,22 @@
       "title": "直面挑战，别只罗列优势",
       "signature": "挑战要带数字、点到科室和病种，写到让院长皱眉，否则闭环第一环就是虚的。",
       "triggered": true,
-      "position": 7,
+      "position": 5,
       "mode": "marker",
       "span": [
-        7,
-        10
+        5,
+        6
       ],
       "probe_turns": {
-        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 7,
-        "科室|病种": 9,
-        "皱眉|疼": 9
+        "数字|\\d|外转率|CMI|DRG|DIP|亏损": 5,
+        "科室|病种": 5,
+        "皱眉|疼": 5
       },
       "missing_probes": [],
       "declared_turns": [
-        7,
-        9
+        5
       ],
-      "declared_turn": 7
+      "declared_turn": 5
     },
     {
       "id": "P03",
@@ -87,22 +81,21 @@
       "title": "选题不能太大，也不能太小",
       "signature": "选题要具体到遮住院名就认不出；太大太空，太小小到不配叫机构战略。",
       "triggered": true,
-      "position": 11,
+      "position": 7,
       "mode": "marker",
       "span": [
-        11,
-        14
+        7,
+        8
       ],
       "probe_turns": {
-        "遮住|盖住|挡住院名": 13,
-        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 13
+        "遮住|盖住|挡住院名": 7,
+        "具体[\\s\\S]{0,60}(?:病种|人群|竞争|支付)|(?:病种|人群|竞争|支付)[\\s\\S]{0,60}具体": 7
       },
       "missing_probes": [],
       "declared_turns": [
-        11,
-        13
+        7
       ],
-      "declared_turn": 11
+      "declared_turn": 7
     },
     {
       "id": "P04",
@@ -110,43 +103,53 @@
       "title": "把逻辑链做实：指标、举措、结果",
       "signature": "目标→指标→驱动因素→举措→责任人→基线→目标值→实际值→复盘一条线打通，指标、举措、结果不能三张皮。",
       "triggered": true,
-      "position": 15,
+      "position": 9,
       "mode": "marker",
       "span": [
-        15,
-        18
+        9,
+        16
       ],
       "probe_turns": {
-        "目标": 15,
-        "指标": 15,
-        "举措": 17,
-        "结果": 17,
-        "复盘|驱动因素|责任人|基线|目标值|实际值": 15
+        "目标": 9,
+        "指标": 9,
+        "举措": 15,
+        "结果": 15,
+        "复盘|驱动因素|责任人|基线|目标值|实际值": 11
       },
       "missing_probes": [],
       "declared_turns": [
-        15,
-        17
+        9,
+        11,
+        13,
+        15
       ],
-      "declared_turn": 15
+      "declared_turn": 9
     },
     {
       "id": "P05",
       "layer": "想清楚",
       "title": "管理工具服务业务目标，不能反过来",
       "signature": "先有业务目标再用工具；删掉 BSC/BLM/SWOT 之后还剩什么，剩下的才是战略。",
-      "triggered": false,
-      "position": null,
-      "mode": "probe",
-      "span": null,
-      "probe_turns": {},
-      "missing_probes": [
-        "删掉|拿掉",
-        "BSC|BLM|SWOT",
-        "业务目标"
+      "triggered": true,
+      "position": 17,
+      "mode": "marker",
+      "span": [
+        17,
+        24
       ],
-      "declared_turns": [],
-      "note": "探针在整份 transcript 中未全部命中"
+      "probe_turns": {
+        "删掉|拿掉": 21,
+        "BSC|BLM|SWOT": 19,
+        "业务目标": 21
+      },
+      "missing_probes": [],
+      "declared_turns": [
+        17,
+        19,
+        21,
+        23
+      ],
+      "declared_turn": 17
     },
     {
       "id": "P06",
@@ -154,25 +157,28 @@
       "title": "规划编制是基本功，关键是把资源和绩效「配称」上去",
       "signature": "把长篇压成战略一张图五层+不做什么，资源预算与绩效考核跟战略咬合，科主任三句话能说清。",
       "triggered": true,
-      "position": 19,
+      "position": 25,
       "mode": "marker",
       "span": [
-        19,
-        24
+        25,
+        36
       ],
       "probe_turns": {
-        "战略一张图|五层": 19,
-        "资源|预算": 21,
-        "绩效": 23,
-        "三句话": 23
+        "战略一张图|五层": 25,
+        "资源|预算": 27,
+        "绩效": 29,
+        "三句话": 31
       },
       "missing_probes": [],
       "declared_turns": [
-        19,
-        21,
-        23
+        25,
+        27,
+        29,
+        31,
+        33,
+        35
       ],
-      "declared_turn": 19
+      "declared_turn": 25
     },
     {
       "id": "P07",
@@ -180,27 +186,29 @@
       "title": "治理创新要落到业务结果上",
       "signature": "治理创新必须挂四维结果对照表：业务增长、财务经营、质量安全、健康结果，每维都有基线与现状。",
       "triggered": true,
-      "position": 25,
+      "position": 37,
       "mode": "marker",
       "span": [
-        25,
-        28
+        37,
+        44
       ],
       "probe_turns": {
-        "四维|四个维度": 25,
-        "业务增长": 27,
-        "财务经营": 27,
-        "质量安全": 27,
-        "健康结果": 27,
-        "基线": 27,
-        "现状": 27
+        "四维|四个维度": 37,
+        "业务增长": 37,
+        "财务经营": 37,
+        "质量安全": 37,
+        "健康结果": 37,
+        "基线": 39,
+        "现状": 39
       },
       "missing_probes": [],
       "declared_turns": [
-        25,
-        27
+        37,
+        39,
+        41,
+        43
       ],
-      "declared_turn": 25
+      "declared_turn": 37
     },
     {
       "id": "P08",
@@ -208,26 +216,28 @@
       "title": "用经营汇报替代表决心汇报",
       "signature": "汇报按问题、取舍、结果、没做到四段讲，第三加第四段至少占一半篇幅。",
       "triggered": true,
-      "position": 33,
+      "position": 45,
       "mode": "marker",
       "span": [
-        33,
-        36
+        45,
+        52
       ],
       "probe_turns": {
-        "四段": 33,
-        "问题": 33,
-        "取舍": 33,
-        "结果": 33,
-        "没做到|学到什么": 33,
-        "一半": 35
+        "四段": 45,
+        "问题": 45,
+        "取舍": 45,
+        "结果": 45,
+        "没做到|学到什么": 45,
+        "一半": 51
       },
       "missing_probes": [],
       "declared_turns": [
-        33,
-        35
+        45,
+        47,
+        49,
+        51
       ],
-      "declared_turn": 33
+      "declared_turn": 45
     },
     {
       "id": "P09",
@@ -235,20 +245,25 @@
       "title": "让深度思考过、作出艰难决策的人来讲",
       "signature": "让书记/院长/分管领导本人讲 20 分钟、答辩 10 到 15 分钟，答得出「放弃了什么、为什么」。",
       "triggered": true,
-      "position": null,
-      "mode": "out_of_order",
-      "span": null,
-      "probe_turns": {},
-      "missing_probes": [
-        "书记|院长|分管领导",
-        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15",
-        "放弃(?:了)?什么"
+      "position": 53,
+      "mode": "marker",
+      "span": [
+        53,
+        60
       ],
+      "probe_turns": {
+        "书记|院长|分管领导": 53,
+        "20\\s*分钟|10\\s*[~～\\-—–到]\\s*15": 57,
+        "放弃(?:了)?什么": 57
+      },
+      "missing_probes": [],
       "declared_turns": [
-        29,
-        31
+        53,
+        55,
+        57,
+        59
       ],
-      "note": "探针在轮 31 已全部出现，但按顺序此时已过位（游标在轮 37）"
+      "declared_turn": 53
     },
     {
       "id": "P10",
@@ -256,23 +271,24 @@
       "title": "AI 时代，少写一点",
       "signature": "AI 时代少写：整个战略一页纸讲完，标题写结论句，一页只讲一个观点。",
       "triggered": true,
-      "position": 37,
+      "position": 61,
       "mode": "marker",
       "span": [
-        37,
-        40
+        61,
+        66
       ],
       "probe_turns": {
-        "一页纸": 37,
-        "结论句": 39,
-        "一个观点": 39
+        "一页纸": 61,
+        "结论句": 63,
+        "一个观点": 65
       },
       "missing_probes": [],
       "declared_turns": [
-        37,
-        39
+        61,
+        63,
+        65
       ],
-      "declared_turn": 37
+      "declared_turn": 61
     },
     {
       "id": "P11",
@@ -280,43 +296,33 @@
       "title": "用通用叙事方法讲中国特色",
       "signature": "用 DRG/DIP↔价值医疗、紧密型医联体↔IDS、分级诊疗↔人群健康这套通用语法讲中国特色，指标选国际上可比的。",
       "triggered": true,
-      "position": 41,
+      "position": 67,
       "mode": "marker",
       "span": [
-        41,
-        44
+        67,
+        75
       ],
       "probe_turns": {
-        "DRG|DIP": 41,
-        "价值医疗|VBHC": 41,
-        "医联体|医疗联合体": 41,
-        "IDS|整合型": 41,
-        "分级诊疗": 41,
-        "人群健康|Population Health": 41,
-        "国际可比": 43
+        "DRG|DIP": 67,
+        "价值医疗|VBHC": 67,
+        "医联体|医疗联合体": 67,
+        "IDS|整合型": 67,
+        "分级诊疗": 67,
+        "人群健康|Population Health": 67,
+        "国际可比": 69
       },
       "missing_probes": [],
       "declared_turns": [
-        41,
-        43
+        67,
+        69,
+        71
       ],
-      "declared_turn": 41
+      "declared_turn": 67
     }
   ],
   "order": {
-    "out_of_order": [
-      {
-        "step": "P09",
-        "first_hit_turn": 31,
-        "expected_after": 33,
-        "prev_step": "P08",
-        "prev_position": 33,
-        "missing_probes": []
-      }
-    ],
-    "missing": [
-      "P05"
-    ]
+    "out_of_order": [],
+    "missing": []
   },
   "discipline": {
     "limits": {
@@ -328,16 +334,16 @@
     },
     "opening": {
       "turn": 1,
-      "chars": 162,
+      "chars": 13,
       "questions": 1,
-      "ok": false,
+      "ok": true,
       "has_question": true
     },
     "turns": [
       {
         "turn": 1,
         "role": "opening",
-        "body_chars": 162,
+        "body_chars": 13,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -346,8 +352,8 @@
       {
         "turn": 3,
         "role": "assistant",
-        "body_chars": 33,
-        "questions": 1,
+        "body_chars": 30,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -355,8 +361,8 @@
       {
         "turn": 5,
         "role": "assistant",
-        "body_chars": 32,
-        "questions": 1,
+        "body_chars": 31,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -364,7 +370,7 @@
       {
         "turn": 7,
         "role": "assistant",
-        "body_chars": 35,
+        "body_chars": 22,
         "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
@@ -382,7 +388,7 @@
       {
         "turn": 11,
         "role": "assistant",
-        "body_chars": 26,
+        "body_chars": 24,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -391,7 +397,7 @@
       {
         "turn": 13,
         "role": "assistant",
-        "body_chars": 34,
+        "body_chars": 28,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -400,8 +406,8 @@
       {
         "turn": 15,
         "role": "assistant",
-        "body_chars": 32,
-        "questions": 2,
+        "body_chars": 36,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -409,8 +415,8 @@
       {
         "turn": 17,
         "role": "assistant",
-        "body_chars": 30,
-        "questions": 0,
+        "body_chars": 21,
+        "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -418,7 +424,7 @@
       {
         "turn": 19,
         "role": "assistant",
-        "body_chars": 22,
+        "body_chars": 13,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -427,7 +433,7 @@
       {
         "turn": 21,
         "role": "assistant",
-        "body_chars": 27,
+        "body_chars": 18,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -436,8 +442,8 @@
       {
         "turn": 23,
         "role": "assistant",
-        "body_chars": 38,
-        "questions": 1,
+        "body_chars": 11,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -445,7 +451,7 @@
       {
         "turn": 25,
         "role": "assistant",
-        "body_chars": 31,
+        "body_chars": 19,
         "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
@@ -454,7 +460,7 @@
       {
         "turn": 27,
         "role": "assistant",
-        "body_chars": 24,
+        "body_chars": 23,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -463,8 +469,8 @@
       {
         "turn": 29,
         "role": "assistant",
-        "body_chars": 19,
-        "questions": 2,
+        "body_chars": 20,
+        "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -472,8 +478,8 @@
       {
         "turn": 31,
         "role": "assistant",
-        "body_chars": 34,
-        "questions": 0,
+        "body_chars": 15,
+        "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -481,7 +487,7 @@
       {
         "turn": 33,
         "role": "assistant",
-        "body_chars": 48,
+        "body_chars": 23,
         "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
@@ -490,8 +496,8 @@
       {
         "turn": 35,
         "role": "assistant",
-        "body_chars": 30,
-        "questions": 1,
+        "body_chars": 20,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -499,8 +505,8 @@
       {
         "turn": 37,
         "role": "assistant",
-        "body_chars": 20,
-        "questions": 2,
+        "body_chars": 30,
+        "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -508,8 +514,8 @@
       {
         "turn": 39,
         "role": "assistant",
-        "body_chars": 26,
-        "questions": 0,
+        "body_chars": 15,
+        "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
         "violations": []
@@ -517,7 +523,7 @@
       {
         "turn": 41,
         "role": "assistant",
-        "body_chars": 41,
+        "body_chars": 14,
         "questions": 1,
         "explain_sentences": 0,
         "bullets": 0,
@@ -526,7 +532,151 @@
       {
         "turn": 43,
         "role": "assistant",
-        "body_chars": 30,
+        "body_chars": 14,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 45,
+        "role": "assistant",
+        "body_chars": 24,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 47,
+        "role": "assistant",
+        "body_chars": 13,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 49,
+        "role": "assistant",
+        "body_chars": 16,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 51,
+        "role": "assistant",
+        "body_chars": 28,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 53,
+        "role": "assistant",
+        "body_chars": 19,
+        "questions": 2,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 55,
+        "role": "assistant",
+        "body_chars": 12,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 57,
+        "role": "assistant",
+        "body_chars": 35,
+        "questions": 0,
+        "explain_sentences": 1,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 59,
+        "role": "assistant",
+        "body_chars": 19,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 61,
+        "role": "assistant",
+        "body_chars": 16,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 63,
+        "role": "assistant",
+        "body_chars": 17,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 65,
+        "role": "assistant",
+        "body_chars": 27,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 67,
+        "role": "assistant",
+        "body_chars": 26,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 69,
+        "role": "assistant",
+        "body_chars": 28,
+        "questions": 1,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 71,
+        "role": "assistant",
+        "body_chars": 18,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 73,
+        "role": "assistant",
+        "body_chars": 38,
+        "questions": 0,
+        "explain_sentences": 0,
+        "bullets": 0,
+        "violations": []
+      },
+      {
+        "turn": 75,
+        "role": "assistant",
+        "body_chars": 47,
         "questions": 0,
         "explain_sentences": 0,
         "bullets": 0,
@@ -544,130 +694,136 @@
         "position": 3,
         "window": [
           3,
+          6
+        ],
+        "landed": true,
+        "hit_turn": 3,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "手、外转病种、不做什么都有，两张图齐，视为已过。"
+      },
+      {
+        "id": "P02",
+        "gate": "挑战清单|挑战表|挑战[:：]|§\\s*2",
+        "position": 5,
+        "window": [
+          5,
           8
         ],
         "landed": true,
         "hit_turn": 5,
         "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "【第1步/11·市场与竞争】两张图落盘。再答一句：未来五年，你"
-      },
-      {
-        "id": "P02",
-        "gate": "挑战清单|挑战表|挑战[:：]|§\\s*2",
-        "position": 7,
-        "window": [
-          7,
-          12
-        ],
-        "landed": true,
-        "hit_turn": 9,
-        "in_artifact": true,
-        "skipped": false,
-        "hit_snippet": "` 【落盘】规划底稿.md §2 挑战 | 挑战 | 现象"
+        "hit_snippet": "【第2步/11·挑战】抽查 §2：三条带数字、到科室病种，皱"
       },
       {
         "id": "P03",
         "gate": "选题[:：]|§\\s*3|遮住院名",
-        "position": 11,
+        "position": 7,
         "window": [
-          11,
-          16
+          7,
+          10
         ],
         "landed": true,
-        "hit_turn": 13,
-        "in_artifact": true,
+        "hit_turn": 7,
+        "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "` 【落盘】规划底稿.md §3 选题 > 一句话选题：在"
+        "hit_snippet": "【第3步/11·选题】抽查 §3：遮住院名认得出，具体到病种"
       },
       {
         "id": "P04",
         "gate": "逻辑链|九栏|§\\s*4",
-        "position": 15,
+        "position": 9,
         "window": [
-          15,
-          20
+          9,
+          18
         ],
         "landed": true,
-        "hit_turn": 15,
+        "hit_turn": 9,
         "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "【第4步/11·逻辑链】最重要的一个目标是什么？用"
+        "hit_snippet": "【第4步/11·逻辑链】从第 4 步接上，不重问。"
       },
       {
         "id": "P05",
         "gate": "业务目标|工具与业务目标|§\\s*5",
-        "position": null,
-        "window": null,
-        "landed": false,
-        "hit_turn": null,
+        "position": 17,
+        "window": [
+          17,
+          26
+        ],
+        "landed": true,
+        "hit_turn": 21,
         "in_artifact": false,
-        "skipped": true,
-        "skip_reason": "该步未落位（缺探针或乱序），无法检查 gate"
+        "skipped": false,
+        "hit_snippet": "5步/11·工具】删掉工具，业务目标是什么？一句话。"
       },
       {
         "id": "P06",
         "gate": "战略一张图|五层",
-        "position": 19,
-        "window": [
-          19,
-          26
-        ],
-        "landed": true,
-        "hit_turn": 19,
-        "in_artifact": false,
-        "skipped": false,
-        "hit_snippet": "【第6步/11·配称】先摆战略一张图的五层。第一层，愿景是什么？"
-      },
-      {
-        "id": "P07",
-        "gate": "四维|结果对照表|§\\s*7",
         "position": 25,
         "window": [
           25,
-          30
+          38
         ],
         "landed": true,
         "hit_turn": 25,
         "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "【第7步/11·结果对照表】这套治理，用四个维度的数字"
+        "hit_snippet": "【第6步/11·配称】战略一张图五层。你说三条核心举措。"
+      },
+      {
+        "id": "P07",
+        "gate": "四维|结果对照表|§\\s*7",
+        "position": 37,
+        "window": [
+          37,
+          46
+        ],
+        "landed": true,
+        "hit_turn": 37,
+        "in_artifact": false,
+        "skipped": false,
+        "hit_snippet": "【第7步/11·结果对照表】四维各一个指标：业务增长、"
       },
       {
         "id": "P08",
         "gate": "四段|§\\s*8|汇报稿",
-        "position": 33,
+        "position": 45,
         "window": [
-          33,
-          38
+          45,
+          54
         ],
         "landed": true,
-        "hit_turn": 33,
+        "hit_turn": 45,
         "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "【第8步/11·四段汇报】汇报只讲四段：我们面对"
+        "hit_snippet": "【第8步/11·四段汇报】四段：问题、取舍、结果"
       },
       {
         "id": "P09",
         "gate": "答辩|汇报人|§\\s*9",
-        "position": null,
-        "window": null,
-        "landed": false,
-        "hit_turn": null,
+        "position": 53,
+        "window": [
+          53,
+          62
+        ],
+        "landed": true,
+        "hit_turn": 55,
         "in_artifact": false,
-        "skipped": true,
-        "skip_reason": "该步未落位（缺探针或乱序），无法检查 gate"
+        "skipped": false,
+        "hit_snippet": "9步/11·谁来讲】讲多久，答辩多久？"
       },
       {
         "id": "P10",
         "gate": "一页纸|§\\s*10",
-        "position": 37,
+        "position": 61,
         "window": [
-          37,
-          42
+          61,
+          68
         ],
         "landed": true,
-        "hit_turn": 37,
+        "hit_turn": 61,
         "in_artifact": false,
         "skipped": false,
         "hit_snippet": "【第10步/11·一页纸】整份战略，一页纸讲得完吗？"
@@ -675,67 +831,34 @@
       {
         "id": "P11",
         "gate": "通用叙事|价值医疗|§\\s*11",
-        "position": 41,
+        "position": 67,
         "window": [
-          41,
-          44
+          67,
+          75
         ],
         "landed": true,
-        "hit_turn": 41,
+        "hit_turn": 67,
         "in_artifact": false,
         "skipped": false,
-        "hit_snippet": "【第11步/11·通用叙事】要不要用国际通用说法再讲一"
+        "hit_snippet": "【第11步/11·通用叙事】要不要按国际通用说法讲一遍"
       }
     ]
   },
   "numbers": {
     "user_number_tokens": [
-      "0.92",
-      "1.15",
-      "1200",
-      "15",
-      "18",
-      "180",
+      "10",
+      "12",
+      "2",
       "20",
-      "3",
-      "38",
-      "5",
-      "50",
-      "6.2",
-      "68"
+      "22",
+      "30",
+      "5.1",
+      "800"
     ],
     "unprovided": []
   },
   "violations": {
-    "critical": [
-      {
-        "code": "STEP_MISSING",
-        "severity": "critical",
-        "rule": "缺 P05（想清楚·管理工具服务业务目标，不能反过来）",
-        "label": "缺",
-        "turn": null,
-        "detail": "未命中探针：删掉|拿掉；BSC|BLM|SWOT；业务目标（探针在整份 transcript 中未全部命中）",
-        "snippet": ""
-      },
-      {
-        "code": "OPENING_TOO_LONG",
-        "severity": "critical",
-        "rule": "开场超长：首条 assistant 轮正文 162 汉字 > 80",
-        "label": "开场超长",
-        "turn": 1,
-        "detail": "开场应 ≤80 汉字且含一个问号；实际 162 汉字、1 个问号。",
-        "snippet": "我按张琨《听完几十家医院「十五五」规划》的十一条，带你走战略规划：定位、取舍、配称，共 11 步。这套方法很"
-      },
-      {
-        "code": "STEP_OUT_OF_ORDER",
-        "severity": "critical",
-        "rule": "乱序：P09",
-        "label": "乱序",
-        "turn": 31,
-        "detail": "P09 的探针在轮 31 已全部出现，但前序步骤 P08 落位在轮 33——原文十一条顺序不可换（想清楚→做出来→讲明白）。",
-        "snippet": "【第9步/11·谁来讲】时长要争回来：20 分钟讲述，10 到 15 分钟答辩；答辩第一问就是你们放弃了什么。…"
-      }
-    ],
+    "critical": [],
     "warning": []
   }
 }
